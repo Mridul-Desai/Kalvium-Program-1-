@@ -58,5 +58,23 @@ This project involves implementing a Drawing App where users can interact with a
 The HTML and CSS code are already provided. You need to implement the functionality in `app.js`. 
 
 ---
+**Key Hints for Working with Canvas:**
+**Canvas Basics**
+- The <canvas> element in HTML is a drawing surface. Think of it as a blank sheet of paper you can draw on using JavaScript.
+- To draw, you need to use the getContext("2d") method, which gives you a context object with methods for drawing shapes, paths, and more.
+- ```const context = paintCanvas.getContext("2d");```
+- Here, paintCanvas is your <canvas> element, and context is the interface that allows you to draw shapes, lines, and more.
 
+**Drawing Paths**
+- The Canvas API uses a "path-based" approach to drawing. You can think of a path as a series of connected points that the canvas "remembers."
+**Key methods for paths:**
+**beginPath(): Starts a new drawing path.**
+**moveTo(x, y): Moves the "pen" to the starting point without drawing.**
+**lineTo(x, y): Draws a straight line from the current position to the specified (x, y).**
+**Applying the Drawing**
+- After defining the path, you must use the stroke() method to apply it to the canvas.
+**Using Coordinates**
+- The (x1, y1) are the starting coordinates of the line, and (x2, y2) are the ending coordinates.
+- These coordinates are relative to the canvas and should be passed into the respective moveTo() and lineTo() methods.
+- 
 **All the very best!**
