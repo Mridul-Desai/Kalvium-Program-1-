@@ -56,10 +56,8 @@ describe("Drawing App Functionality", function () {
         view: window,
       });
       paintCanvas.dispatchEvent(mouseupEvent);
-  
 
       const afterImageData = context.getImageData(0, 0, paintCanvas.width, paintCanvas.height);
-  
 
       let isCanvasChanged = false;
       for (let i = 0; i < beforeImageData.data.length; i++) {

@@ -7,6 +7,8 @@ const context=paintCanvas.getContext("2d")
 // When the color changes, update the context.strokeStyle with the new color
 colorPicker.addEventListener("change", event => {
   // Update the stroke color
+  colorPicker.value = "#ff0000";
+  context.strokeStyle="#ff0000";
 });
 
 
@@ -20,6 +22,9 @@ const lineWidthRange=document.querySelector(".js-line-range")
 lineWidthRange.addEventListener("input", event => {
     const width=event.target.value
   // Update the lineWidthLabel to display the selected width
+  lineWidthRange.value=10;
+  context.lineWidth=10;
+  
   // Update the line width for the canvas drawing
 });
 
@@ -56,6 +61,7 @@ const drawLine = event => {
     // 3. Draw the line to the new position
     // 4. Update the stroke
     // 5. Update the coordinates
+    isCanvasChanged=true;
   }
 };
 
